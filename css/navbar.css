@@ -47,7 +47,7 @@
 .header .menu {
 	clear: both;
 	max-height: 0;
-	transition: max-height 0.2s ease-out;
+	transition: max-height 0.5s ease-out;
 }
 
 /* menu icon */
@@ -64,42 +64,19 @@
 .header .menu-icon .navicon {
 	background: white;
 	display: block;
-	height: 3px;
+	height: 10px;
 	position: relative;
 	transition: 0.2s ease-out;
 	width: 18px;
 }
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-	background: white;
-	content: "";
-	display: block;
-	height: 100%;
-	position: absolute;
-	transition: all 0.2s ease-out;
-	width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-	top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-	top: -5px;
-}
-
-/* menu btn */
 
 .header .menu-btn {
 	display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-	max-height: 240px;
+	max-height: 300px;
 }
-
-/* 48em = 768px */
 
 @media screen and (min-width: 768px) {
 	.header li {
@@ -109,11 +86,10 @@
 		padding: 20px 30px;
 	}
 	.header .menu {
-		clear: none;
 		float: right;
 		max-height: none;
 	}
 	.header .menu-icon {
 		display: none;
-	}
+	} 
 }

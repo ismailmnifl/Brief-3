@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta name="description" content="Find and Compare Great Car Deals.
+		 Book with Confidence Create a Car Price Alert 
+		 and Monitor Car Deals for Specific Travel Dates. Easy & 
+		 fast booking. Best price guarantee. Get instant confirmation. 
+		 Flexible booking. No hidden costs. Exclusive deals.">
+		<meta name="keywords" content="Rent, car, deals, supercars, motocycle, truck, drive">
+		<meta name="author" content="ismail mnifil">
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Rent car, Reservations</title>
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="css/gallery-stayles.css" />
 		<link rel="stylesheet" href="css/contactstyles.css" />
@@ -29,11 +36,11 @@
 		<main>
 			<div class="pushDown"></div>
 			<div class="big-tittle-gallery">
-				<h1>RESERVATION</h1>
+				<h2>RESERVATION</h2>
 			</div>
-			<h1 id="our-services2" class="big_title">
+			<h2 id="our-services2" class="big_title">
 				Let's find out what you need
-			</h1>
+			</h2>
 			<!-- form start -->
 			<div class="reservation-container">
 				<div class="reservation-form">
@@ -43,7 +50,7 @@
 							<span class="radio__input">
 								<input
 									onclick="transmission()"
-									id="radio1"
+									id="radioManual"
 									type="radio"
 									name="transmissions"
 								/>
@@ -51,12 +58,12 @@
 							</span>
 							<span class="radio__label">Manual</span>
 						</label>
-
+						
 						<label class="radio">
 							<span class="radio__input">
 								<input
 									onclick="transmission()"
-									id="radio2"
+									id="radioAutomatic"
 									type="radio"
 									name="transmissions"
 								/>
@@ -64,12 +71,15 @@
 							</span>
 							<span class="radio__label">Automatic</span>
 						</label>
-						<h2>Energy sources</h2>
+					</div>
+						
+						<div class="energy">
+							<h2>Energy sources</h2>
 						<label class="radio">
 							<span class="radio__input">
 								<input
 									onclick="energyElectric()"
-									id="radio3"
+									id="radioElectric"
 									type="radio"
 									name="Energy"
 								/>
@@ -81,7 +91,7 @@
 							<span class="radio__input">
 								<input
 									onclick="energyHybrid()"
-									id="radio4"
+									id="radioHybrid"
 									type="radio"
 									name="Energy"
 								/>
@@ -93,7 +103,7 @@
 							<span class="radio__input">
 								<input
 									onclick="energyGas()"
-									id="radio5"
+									id="radioGasoline"
 									type="radio"
 									name="Energy"
 								/>
@@ -105,7 +115,7 @@
 							<span class="radio__input">
 								<input
 									onclick="energyDiesel()"
-									id="radio6"
+									id="radioDiesel"
 									type="radio"
 									name="Energy"
 								/>
@@ -114,6 +124,7 @@
 							<span class="radio__label">Diesel</span>
 						</label>
 					</div>
+					
 
 					<div class="choices">
 						<h2>Types of Machines</h2>
@@ -121,7 +132,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio7"
+									id="radioMotosycle"
 									type="radio"
 									name="Machines"
 								/>
@@ -132,7 +143,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio8"
+									id="radiocityVehicle"
 									type="radio"
 									name="Machines"
 								/>
@@ -143,7 +154,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio9"
+									id="radioCompact"
 									type="radio"
 									name="Machines"
 								/>
@@ -154,7 +165,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio10"
+									id="radioSedan"
 									type="radio"
 									name="Machines"
 								/>
@@ -165,7 +176,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio11"
+									id="radioUtility"
 									type="radio"
 									name="Machines"
 								/>
@@ -176,7 +187,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio12"
+									id="radioConstruction"
 									type="radio"
 									name="Machines"
 								/>
@@ -189,7 +200,7 @@
 						<label class="radio">
 							<span class="radio__input">
 								<input
-									id="radio13"
+									id="radioTruck"
 									type="radio"
 									name="Machines"
 								/>
@@ -198,7 +209,7 @@
 							<span class="radio__label">Truck</span>
 						</label>
 					</div>
-					<div class="choices">
+					<div class="Datechoices">
 						<label for="departureDate">Departure Date</label>
 						<input type="date" id="departureDate" />
 						<label for="terminationDate">Termination Date</label>
@@ -222,9 +233,9 @@
 				<div class="footer-section footer1">
 					<img id="logo-footer" src="img/logo-white.png" alt="logo" />
 					<p>
-						Lorem ipsum dolor sit amet consectetur <br />
-						adipisicing elit. Autem quibusdam <br />
-						corporis obcaecati perferendis
+						Find and Compare Great Car Deals. <br>
+						Book with Confidence Create a Car <br>
+						and Monitor Car Deals for Specific Travel Dates
 					</p>
 					<br />
 					<a class="socials" href="#"

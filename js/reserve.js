@@ -7,28 +7,32 @@ function resetAll() {
 }
 
 function uncheckMachines() {
-	document.getElementById("radio7").checked = false;
-	document.getElementById("radio8").checked = false;
-	document.getElementById("radio9").checked = false;
-	document.getElementById("radio10").checked = false;
-	document.getElementById("radio11").checked = false;
-	document.getElementById("radio12").checked = false;
-	document.getElementById("radio13").checked = false;
+
+	 var choices = document.querySelectorAll('.choices input[type="radio"]');
+	var i = 0;
+	for(i = 0 ; i < choices.length;i++)
+	{
+		choices[i].checked = false;
+	}
+	
 }
 function resetMachines() {
-	document.getElementById("radio7").disabled = true;
-	document.getElementById("radio8").disabled = true;
-	document.getElementById("radio9").disabled = true;
-	document.getElementById("radio10").disabled = true;
-	document.getElementById("radio11").disabled = true;
-	document.getElementById("radio12").disabled = true;
-	document.getElementById("radio13").disabled = true;
+	
+	var choices = document.querySelectorAll('.choices input[type="radio"]');
+	var i = 0;
+	for(i = 0 ; i < choices.length;i++)
+	{
+		choices[i].disabled = true;
+	}
 }
 function resetEnergySources() {
-	document.getElementById("radio3").checked = false;
-	document.getElementById("radio4").checked = false;
-	document.getElementById("radio5").checked = false;
-	document.getElementById("radio6").checked = false;
+
+	var choices = document.querySelectorAll('.energy input[type="radio"]');
+	var i = 0;
+	for(i = 0 ; i < choices.length;i++)
+	{
+		choices[i].checked = false;
+	}
 }
 /* reset uncheck functios end*/
 /* new code  */
@@ -36,63 +40,64 @@ function transmission() {
 	uncheckMachines();
 	resetMachines();
 	resetEnergySources();
-	let checkerManual = document.getElementById("radio1").checked;
+	let checkerManual = document.getElementById("radioManual").checked;
 
 	if (checkerManual) {
-		document.getElementById("radio7").disabled = false;
-		document.getElementById("radio8").disabled = false;
-		document.getElementById("radio9").disabled = false;
-		document.getElementById("radio11").disabled = false;
-		document.getElementById("radio12").disabled = false;
+		document.getElementById("radioMotosycle").disabled = false;
+		document.getElementById("radiocityVehicle").disabled = false;
+		document.getElementById("radioCompact").disabled = false;
+		document.getElementById("radioUtility").disabled = false;
+		document.getElementById("radioConstruction").disabled = false;
 	} else {
-		document.getElementById("radio7").disabled = false;
-		document.getElementById("radio10").disabled = false;
-		document.getElementById("radio13").disabled = false;
+		document.getElementById("radioMotosycle").disabled = false;
+		document.getElementById("radioSedan").disabled = false;
+		document.getElementById("radioTruck").disabled = false;
 	}
 }
 /* end new code */
 function energyElectric() {
 	resetMachines();
-	let trasmission = document.getElementById("radio1").checked;
+	let trasmission = document.getElementById("radioManual").checked;
 	if (trasmission == true) {
-		document.getElementById("radio7").disabled = false;
-		document.getElementById("radio8").disabled = false;
-		document.getElementById("radio9").disabled = true;
+		document.getElementById("radioMotosycle").disabled = false;
+		document.getElementById("radiocityVehicle").disabled = false;
+	}else{
+		document.getElementById("radioMotosycle").disabled = false;
 	}
 }
 function energyHybrid() {
 	resetMachines();
-	let trasmission = document.getElementById("radio1").checked;
+	let trasmission = document.getElementById("radioManual").checked;
 	if (trasmission == true) {
-		document.getElementById("radio8").disabled = false;
-		document.getElementById("radio9").disabled = false;
+		document.getElementById("radiocityVehicle").disabled = false;
+		document.getElementById("radioCompact").disabled = false;
 	} else {
-		document.getElementById("radio10").disabled = false;
+		document.getElementById("radioSedan").disabled = false;
 	}
 }
 function energyGas() {
 	resetMachines();
-	let trasmission = document.getElementById("radio1").checked;
+	let trasmission = document.getElementById("radioManual").checked;
 	if (trasmission == true) {
-		document.getElementById("radio7").disabled = false;
-		document.getElementById("radio8").disabled = false;
-		document.getElementById("radio9").disabled = false;
-		document.getElementById("radio12").disabled = false;
+		document.getElementById("radioMotosycle").disabled = false;
+		document.getElementById("radiocityVehicle").disabled = false;
+		document.getElementById("radioCompact").disabled = false;
+		document.getElementById("radioConstruction").disabled = false;
 	} else {
-		document.getElementById("radio10").disabled = false;
+		document.getElementById("radioSedan").disabled = false;
 	}
 }
 function energyDiesel() {
 	resetMachines();
-	let trasmission = document.getElementById("radio1").checked;
+	let trasmission = document.getElementById("radioManual").checked;
 	if (trasmission == true) {
-		document.getElementById("radio8").disabled = false;
-		document.getElementById("radio9").disabled = false;
-		document.getElementById("radio11").disabled = false;
-		document.getElementById("radio12").disabled = false;
+		document.getElementById("radiocityVehicle").disabled = false;
+		document.getElementById("radioCompact").disabled = false;
+		document.getElementById("radioUtility").disabled = false;
+		document.getElementById("radioConstruction").disabled = false;
 	} else {
-		document.getElementById("radio10").disabled = false;
-		document.getElementById("radio13").disabled = false;
+		document.getElementById("radioSedan").disabled = false;
+		document.getElementById("radioTruck").disabled = false;
 	}
 }
 function checkOut() {
@@ -111,7 +116,7 @@ function checkOut() {
 	}
 }
 function selectedTransmission() {
-	if (document.getElementById("radio1").checked) {
+	if (document.getElementById("radioManual").checked) {
 		return "manual";
 	} else {
 		return "automatic";
@@ -128,21 +133,28 @@ function selectedMachine() {
 		"truck"
 	);
 	let i = 0;
-	for (i = 7; i <= 13; i++) {
-		if (document.getElementById("radio" + i).checked) {
-			return machines[i - 7];
+	var machineCchoices = document.querySelectorAll('.choices input[type="radio"]');
+	for (i =0 ; i < machineCchoices.length; i++) {
+		if(machineCchoices[i].checked)
+		{
+			return machines[i];
 		}
 	}
+
 }
 
 function selectedEnergySources() {
 	let energy = new Array("electric", "hybrid", "gas", "diesel");
 	let i = 0;
-	for (i = 3; i <= 6; i++) {
-		if (document.getElementById("radio" + i).checked) {
-			return energy[i - 3];
+	var energyChoice = document.querySelectorAll('.energy input[type="radio"]');
+	for (i =0 ; i < energyChoice.length; i++) {
+		if(energyChoice[i].checked)
+		{
+			return energy[i];
 		}
 	}
+	
+
 }
 function dateDeff() {
 	var dapartureDate = document.getElementById("departureDate").value;
@@ -155,7 +167,6 @@ function machineEnergy() {
 	var transmission = selectedTransmission();
 	var machine = selectedMachine();
 	var energy = selectedEnergySources();
-	/* var numberDays = document.getElementById("daysN").value; */
 	var numberDays = dateDeff();
 	var energyFee = 0;
 	var price = 0;

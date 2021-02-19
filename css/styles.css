@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
 }
 body {
 	background-color: #262626;
@@ -129,7 +130,6 @@ body {
 	padding: 20px 15px;
 	display: flex;
 	flex-direction: column;
-	box-shadow: 0px 5px 202px rgba(0, 0, 0, 0.5);
 	transition: 0.3s ease-in-out;
 }
 .container_cards .card .conent_card {
@@ -262,9 +262,9 @@ p {
 	.centered h1 {
 		font-size: 14px;
 	}
-	#logo {
+	 #logo {
 		display: none;
-	}
+	} 
 	.footer-section {
 		width: 100%;
 	}
@@ -280,9 +280,9 @@ p {
 		position: relative;
 		top: 0px;
 	}
-	#nav-logo {
-		display: none;
-	}
+	 #nav-logo {
+		width: 20%;
+	} 
 	.stars-rating img {
 		position: relative;
 		margin-left: 0px;
