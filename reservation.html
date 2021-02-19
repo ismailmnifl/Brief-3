@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/gallery-stayles.css" />
+		<link rel="stylesheet" href="css/contactstyles.css" />
+		<link rel="stylesheet" href="css/reservationStyle.css" />
+		<link rel="stylesheet" href="./css/navbar.css" />
+	</head>
+	<body>
+		<header class="header">
+			<img id="nav-logo" src="img/logo-white.png" alt="" />
+			<input class="menu-btn" type="checkbox" id="menu-btn" />
+			<label class="menu-icon" for="menu-btn"
+				><span class="navicon"></span
+			></label>
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="reservation.html">Reservation</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</header>
+
+		<main>
+			<div class="pushDown"></div>
+			<div class="big-tittle-gallery">
+				<h1>RESERVATION</h1>
+			</div>
+			<h1 id="our-services2" class="big_title">
+				Let's find out what you need
+			</h1>
+			<!-- form start -->
+			<div class="reservation-container">
+				<div class="reservation-form">
+					<div class="types">
+						<h2>Types of transmissions</h2>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="transmission()"
+									id="radio1"
+									type="radio"
+									name="transmissions"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Manual</span>
+						</label>
+
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="transmission()"
+									id="radio2"
+									type="radio"
+									name="transmissions"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Automatic</span>
+						</label>
+						<h2>Energy sources</h2>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="energyElectric()"
+									id="radio3"
+									type="radio"
+									name="Energy"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Electric</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="energyHybrid()"
+									id="radio4"
+									type="radio"
+									name="Energy"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Hybrid</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="energyGas()"
+									id="radio5"
+									type="radio"
+									name="Energy"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Gasoline</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									onclick="energyDiesel()"
+									id="radio6"
+									type="radio"
+									name="Energy"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Diesel</span>
+						</label>
+					</div>
+
+					<div class="choices">
+						<h2>Types of Machines</h2>
+
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio7"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Motosycle</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio8"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">city ​​vehicle</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio9"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Compact</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio10"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Sedan</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio11"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Utility</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio12"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label"
+								>Construction engine</span
+							>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									id="radio13"
+									type="radio"
+									name="Machines"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Truck</span>
+						</label>
+					</div>
+					<div class="choices">
+						<label for="departureDate">Departure Date</label>
+						<input type="date" id="departureDate" />
+						<label for="terminationDate">Termination Date</label>
+						<input type="date" id="terminationDate" />
+
+						<a
+							onclick="checkOut()"
+							class="btn-123r"
+							href="#our-services"
+							><button>Submit</button></a
+						>
+						<div class="back"><h2 id="res"></h2></div>
+					</div>
+				</div>
+			</div>
+			<!-- form end -->
+		</main>
+		<!-- footer start -->
+		<footer class="">
+			<div class="footer">
+				<div class="footer-section footer1">
+					<img id="logo-footer" src="img/logo-white.png" alt="logo" />
+					<p>
+						Lorem ipsum dolor sit amet consectetur <br />
+						adipisicing elit. Autem quibusdam <br />
+						corporis obcaecati perferendis
+					</p>
+					<br />
+					<a class="socials" href="#"
+						><img src="img/facebook.png" alt=""
+					/></a>
+					<a class="socials" href="#"
+						><img src="img/instagram.png" alt=""
+					/></a>
+					<a class="socials" href="#"
+						><img src="img/linkedin.png" alt=""
+					/></a>
+					<a class="socials" href="#"
+						><img src="img/Twitter.png" alt=""
+					/></a>
+				</div>
+				<div class="footer-section footer2">
+					<ul class="box">
+						<h2>Product</h2>
+						<li><a href="#">Theme Design</a></li>
+						<li><a href="#">Plug in Design</a></li>
+						<li><a href="#">WordPress</a></li>
+						<li><a href="#">Some World</a></li>
+						<li><a href="#">Contact Design</a></li>
+					</ul>
+				</div>
+				<div class="footer-section footer3">
+					<ul class="box">
+						<h2>Useful links</h2>
+						<li><a href="#">sponsors</a></li>
+						<li><a href="#">Our Murch</a></li>
+						<li><a href="#">Sales</a></li>
+						<li><a href="#">Best Deals</a></li>
+						<li><a href="#">Customer Service</a></li>
+					</ul>
+				</div>
+				<div class="footer-section footer4">
+					<ul class="box">
+						<h2>Address</h2>
+						<li><a href="#">127, DownTown</a></li>
+						<li><a href="#">7D1F S2 Long Street</a></li>
+						<li><a href="#">London</a></li>
+						<li><a href="#">United kingdom</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				All rights reserved &copy;copyrights 2021
+			</div>
+		</footer>
+
+		<!-- footer end -->
+
+		<script src="js/reserve.js"></script>
+		<script></script>
+	</body>
+</html>
