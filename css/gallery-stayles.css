@@ -15,7 +15,7 @@
 .slider {
 	width: 1000px;
 	height: 600px;
-	background: url(/img/trucksImage.jpg);
+	background: url(../img/trucksImage.jpg);
 	margin: 50px auto;
 	animation: slide 20s infinite;
 	border-radius: 20px;
