@@ -82,16 +82,16 @@
 }
 @keyframes slide {
 	25% {
-		background: url(/img/pickup.jpg);
+		background: url(../img/pickup.jpg);
 	}
 	50% {
-		background: url(/img/p.jpg);
+		background: url(../img/p.jpg);
 	}
 	75% {
-		background: url(/img/carImage2.jpg);
+		background: url(../img/carImage2.jpg);
 	}
 	100% {
-		background: url(/img/trucksImage.jpg);
+		background: url(../img/trucksImage.jpg);
 	}
 }
 @media screen and (max-width: 768px) {
